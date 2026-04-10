@@ -40,12 +40,19 @@ trap 'rm -rf "$TMP_DIR"' EXIT
 curl -fsSL "$URL" -o "${TMP_DIR}/palbase.tar.gz"
 tar -xzf "${TMP_DIR}/palbase.tar.gz" -C "$TMP_DIR"
 
+# Find the binary (may be in a subdirectory)
+BINARY=$(find "$TMP_DIR" -name palbase -type f | head -1)
+if [ -z "$BINARY" ]; then
+  echo "Failed to find palbase binary in archive"
+  exit 1
+fi
+
 # Install
 if [ -w "$INSTALL_DIR" ]; then
-  mv "${TMP_DIR}/palbase" "${INSTALL_DIR}/palbase"
+  mv "$BINARY" "${INSTALL_DIR}/palbase"
 else
   echo "Need sudo to install to ${INSTALL_DIR}"
-  sudo mv "${TMP_DIR}/palbase" "${INSTALL_DIR}/palbase"
+  sudo mv "$BINARY" "${INSTALL_DIR}/palbase"
 fi
 
 chmod +x "${INSTALL_DIR}/palbase"
