@@ -1,28 +1,28 @@
 class Palbase < Formula
   desc "Palbase CLI — develop, test, and deploy backend projects"
   homepage "https://palbase.studio"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     on_arm do
-      url "https://github.com/palgroup/palbase-cli/releases/download/v0.1.0/palbase_darwin_arm64.tar.gz"
-      sha256 "8301f89350d0e6e0e06084843de4a4a2e803c8deabae1de32bf287dfad917a05"
+      url "https://github.com/palgroup/palbase-cli/releases/download/v0.2.0/palbase_darwin_arm64.tar.gz"
+      sha256 "bee66c21da1e16304aaa095641b459a1d51b6e8c80e0845c63f737ef14b461de"
     end
     on_intel do
-      url "https://github.com/palgroup/palbase-cli/releases/download/v0.1.0/palbase_darwin_amd64.tar.gz"
-      sha256 "edf6c55ce1733993260f50349e32d888eb08c2ca5a2604de18b5856c8ca993a1"
+      url "https://github.com/palgroup/palbase-cli/releases/download/v0.2.0/palbase_darwin_amd64.tar.gz"
+      sha256 "d58e721bcc2de28a7ffbdfb65d6e48322d94f8061002c9748a5e81b70b110fbd"
     end
   end
 
   on_linux do
     on_arm do
-      url "https://github.com/palgroup/palbase-cli/releases/download/v0.1.0/palbase_linux_arm64.tar.gz"
-      sha256 "bad13da3ae5e2ee2ce1c995d43b942987183cb4a018708e416612aeedae1e3c9"
+      url "https://github.com/palgroup/palbase-cli/releases/download/v0.2.0/palbase_linux_arm64.tar.gz"
+      sha256 "2f3578f0c0fb3d98d37462e1cb9475b5381873e6a3f8d7f91791df87ce7e9ab3"
     end
     on_intel do
-      url "https://github.com/palgroup/palbase-cli/releases/download/v0.1.0/palbase_linux_amd64.tar.gz"
-      sha256 "4b8c4ef811a6dcbb97f22c842ced86092d918049916819bcf3847a98ca0dabac"
+      url "https://github.com/palgroup/palbase-cli/releases/download/v0.2.0/palbase_linux_amd64.tar.gz"
+      sha256 "b5329bbe215a082e5a8ee8b6709075eda09a97d593778fe2937a106ee005e3b5"
     end
   end
 
