@@ -22,7 +22,7 @@ jobs:
           GH_TOKEN: ${{ secrets.PALBASE_TOKEN }}
         run: |
           gh run download ${{ inputs.run_id }} \
-            --repo seklabsnet/palbase \
+            --repo palgroup/palbase-cli \
             --name cli-binaries \
             --dir dist
 
@@ -32,10 +32,10 @@ jobs:
         run: |
           VERSION="${{ inputs.version }}"
 
-          gh release delete "$VERSION" --repo seklabsnet/homebrew-tap --yes 2>/dev/null || true
+          gh release delete "$VERSION" --repo palgroup/homebrew-tap --yes 2>/dev/null || true
 
           gh release create "$VERSION" \
-            --repo seklabsnet/homebrew-tap \
+            --repo palgroup/homebrew-tap \
             --title "Palbase CLI $VERSION" \
             --notes "Palbase CLI release $VERSION" \
             dist/*.tar.gz dist/*.zip dist/checksums.txt

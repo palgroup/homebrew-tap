@@ -2,9 +2,9 @@
 set -e
 
 # Palbase CLI installer
-# Usage: curl -fsSL https://get.palbase.io/install.sh | sh
+# Usage: curl -fsSL https://get.palbase.studio/install.sh | sh
 
-REPO="seklabsnet/homebrew-tap"
+REPO="palgroup/homebrew-tap"
 INSTALL_DIR="/usr/local/bin"
 
 # Detect OS and architecture
