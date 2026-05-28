@@ -5,20 +5,20 @@
 class Palbase < Formula
   desc "Palbase CLI — develop, test, and deploy backend projects"
   homepage "https://palbase.studio"
-  version "0.3.14"
+  version "0.3.15"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/palgroup/palbase-cli/releases/download/v0.3.14/palbase_darwin_amd64.tar.gz"
-      sha256 "60be7c1bb645ea0fc2038c4f5552f8abe5ded705901ace93702d8665f263ff0f"
+      url "https://github.com/palgroup/palbase-cli/releases/download/v0.3.15/palbase_darwin_amd64.tar.gz"
+      sha256 "aa533534a7044bd85ac33f22bf07fcf7cf559d69ff2501bf9effea2583f6c844"
 
       define_method(:install) do
         bin.install "palbase"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/palgroup/palbase-cli/releases/download/v0.3.14/palbase_darwin_arm64.tar.gz"
-      sha256 "0b95a41bc854c036821e0305efe68e15f75c6d28b15fe4662daede810bfce9a8"
+      url "https://github.com/palgroup/palbase-cli/releases/download/v0.3.15/palbase_darwin_arm64.tar.gz"
+      sha256 "60bed7276323ab23811ae657a97c5b7be8bb52a49914b47342846e73639ac3c8"
 
       define_method(:install) do
         bin.install "palbase"
@@ -28,15 +28,15 @@ class Palbase < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/palgroup/palbase-cli/releases/download/v0.3.14/palbase_linux_amd64.tar.gz"
-      sha256 "d074e048ab1ed9b46b7287b807490e838e53a1ff81fd388d7aae3182b93f8369"
+      url "https://github.com/palgroup/palbase-cli/releases/download/v0.3.15/palbase_linux_amd64.tar.gz"
+      sha256 "78d09ff495ef1bff0cef05f15c0ec790c2343b95092a0b035a8df70a027b534b"
       define_method(:install) do
         bin.install "palbase"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/palgroup/palbase-cli/releases/download/v0.3.14/palbase_linux_arm64.tar.gz"
-      sha256 "388c1efc3f16006d63f809a0f28df37258ea066c701ace0fe4d6247bbac6c925"
+      url "https://github.com/palgroup/palbase-cli/releases/download/v0.3.15/palbase_linux_arm64.tar.gz"
+      sha256 "ea3bfffbe1b5c202b58103106cb6f9302aa065a003d55178cc00dd46927bdcd6"
       define_method(:install) do
         bin.install "palbase"
       end
